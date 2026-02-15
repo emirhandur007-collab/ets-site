@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E.T.S Lojistik | Mersin'den Türkiye'ye Profesyonel Taşımacılık</title>
+
+  <!-- SEO META -->
+  <meta name="description" content="E.T.S Lojistik, Mersin merkezli yurtiçi ve uluslararası taşımacılıkta zamanında, sigortalı ve güvenilir lojistik çözümleri. Parsiyel, komple tır ve palet bazlı taşıma." />
+  <meta name="keywords" content="Mersin lojistik, tır taşımacılığı, parsiyel taşıma Mersin, komple tır, yurtiçi lojistik, uluslararası taşıma, Tarsus lojistik" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="E.T.S Lojistik" />
+  <link rel="canonical" href="https://etslojistik.com" />
+
+  <!-- SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LogisticsBusiness",
+    "name": "E.T.S Group Lojistik ve Depolama",
+    "url": "https://etslojistik.com",
+    "telephone": "+905458820655",
+    "email": "etslojistiktasimacik@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Atalar Pirice Küme Evleri",
+      "addressLocality": "Tarsus, Mersin",
+      "postalCode": "33402",
+      "addressCountry": "TR"
+    },
+    "priceRange": "₺₺",
+    "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-14:00",
+    "paymentAccepted": "Cash, Credit Card",
+    "currenciesAccepted": "TRY, EUR, USD"
+  }
+  </script>
+
+  <style>
+    /* BASE STYLES */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --primary: #0b3c5d;
+      --accent: #f59e0b;
+      --accent-dark: #d97706;
+      --dark: #020617;
+      --light: #f8fafc;
+      --muted: #64748b;
+      --container: 1140px;
+      --radius: 8px;
+      --shadow: 0 10px 25px rgba(0,0,0,0.05);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* PROGRESS BAR */
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 1001;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* HEADER & NAVIGATION - DÜZELTİLDİ */
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2, 6, 23, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .header-inner {
+      max-width: var(--container);
+      margin: auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #f59e0b;
+      letter-spacing: -0.5px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .desktop-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .desktop-nav a:hover {
+      color: #f59e0b;
+    }
+
+    .desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #f59e0b;
+      transition: width 0.3s ease;
+    }
+
+    .desktop-nav a:hover::after {
+      width: 100%;
+    }
+
+    .desktop-nav .cta {
+      background: #f59e0b;
+      color: #020617;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      margin-left: 1rem;
+    }
+
+    .desktop-nav .cta:hover {
+      background: #fbbf24;
+      color: #020617;
+    }
+
+    .desktop-nav .cta::after {
+      display: none;
+    }
+
+    /* HAMBURGER MENU FOR MOBILE - DÜZELTİLDİ */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1002; /* Hamburger'i üste çıkardık */
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #f59e0b;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* MOBILE NAV - TAMAMEN DÜZELTİLDİ */
+    .mobile-nav {
+      position: fixed;
+      top: 70px; /* Header yüksekliği kadar boşluk */
+      left: 0;
+      width: 100%;
+      background: rgba(2, 6, 23, 0.99);
+      backdrop-filter: blur(20px);
+      padding: 2rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 1001; /* Header'dan üste çıkardık */
+      border-top: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .mobile-nav.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav a {
+      display: block;
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+
+    .mobile-nav a:hover {
+      color: #f59e0b;
+      padding-left: 10px;
+    }
+
+    .mobile-nav .cta {
+      background: #f59e0b;
+      color: #020617;
+      padding: 1rem;
+      border-radius: 6px;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 700;
+      border: none;
+    }
+
+    .header-spacer { height: 72px; }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 85vh; /* 90vh'den 85vh'ye düşürdük */
+      background:
+        linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.92)),
+        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      position: relative;
+      padding-top: 20px; /* Üstten biraz boşluk ekledik */
+    }
+
+    .hero-content {
+      max-width: 720px;
+      animation: fadeInUp 1s ease-out;
+      margin-top: -20px; /* Yukarı kaymasını engellemek için */
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5f5;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .hero ul {
+      list-style: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero ul li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero ul li::before {
+      content: '✓';
+      color: #f59e0b;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      margin-bottom: 1rem; /* Alttan boşluk ekledik */
+    }
+
+    .cta-btn {
+      background: var(--accent);
+      color: #020617;
+      padding: 1rem 2.2rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      border-radius: var(--radius);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cta-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(245, 158, 11, 0.2);
+    }
+
+    .cta-btn.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .cta-btn.secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #f59e0b;
+    }
+
+    /* SERVICES */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .problem-box {
+      background: #fff;
+      border-left: 4px solid var(--accent);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .problem-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .problem-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .problem-box:hover img {
+      transform: scale(1.05);
+    }
+
+    .problem-box .content {
+      padding: 1.8rem;
+    }
+
+    .problem-box .content strong {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--dark);
+    }
+
+    /* TRUCK FLEET */
+    .truck-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .truck-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 250px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .truck-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .truck-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .truck-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .truck-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(2,6,23,0.9), transparent);
+      color: white;
+      padding: 2rem 1.5rem 1.5rem;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 4px solid #f59e0b;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .testimonial-rating {
+      color: #f59e0b;
+      margin-top: 0.5rem;
+    }
+
+    /* PROCESS */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      counter-reset: process-counter;
+    }
+
+    .process-item {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      padding-left: 4rem;
+    }
+
+    .process-item::before {
+      counter-increment: process-counter;
+      content: counter(process-counter);
+      position: absolute;
+      left: 1.5rem;
+      top: 1.5rem;
+      width: 32px;
+      height: 32px;
+      background: #f59e0b;
+      color: #020617;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, #0b3c5d, #020617);
+      color: white;
+      text-align: center;
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1594717521732-19e6c2c7fa32?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=10') center/cover;
+      opacity: 0.1;
+    }
+
+    .cta-banner .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 4rem 1.5rem 2rem;
+    }
+
+    .footer-grid {
+      max-width: var(--container);
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+    }
+
+    .footer-column h3 {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: #f59e0b;
+      padding-left: 5px;
+    }
+
+    .footer-contact {
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: #f59e0b;
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      max-width: var(--container);
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid #334155;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: var(--transition);
+    }
+
+    .whatsapp-button:hover {
+      background: #128C7E;
+      transform: scale(1.05);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 3rem 1.5rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .brand {
+        font-size: 1.25rem;
+      }
+      
+      .hero {
+        min-height: 80vh;
+        background-attachment: scroll;
+        padding-top: 10px;
+      }
+      
+      .hero-content {
+        margin-top: 0;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+      
+      .cta-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .problem-grid,
+      .truck-grid,
+      .testimonial-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .whatsapp-button {
+        bottom: 16px;
+        right: 16px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+      }
+      
+      .whatsapp-button span {
+        display: none;
+      }
+      
+      /* Mobil menü düzeltmeleri */
+      .mobile-nav {
+        top: 70px;
+        height: calc(100vh - 70px); /* Ekranın geri kalanını kapla */
+        overflow-y: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 2rem 1rem;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* UTILITY CLASSES */
+    .section-title {
+      color: #f59e0b;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section-heading {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .section-description {
+      color: #475569;
+      max-width: 720px;
+      margin-bottom: 2rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-0 {
+      margin-bottom: 0;
+    }
+
+    /* REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-container">
+  <div class="progress-bar"></div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">E.T.S LOJİSTİK</div>
+    
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <a href="#services">Hizmetler</a>
+      <a href="#trucks">Tır Filosu</a>
+      <a href="#process">Süreç</a>
+      <a href="#testimonials">Referanslar</a>
+      <a href="#contact">İletişim</a>
+      <a class="cta" href="#contact">İletişime Geç</a>
+    </nav>
+    
+    <!-- Mobile Hamburger Menu -->
+    <button class="hamburger" id="hamburger" aria-label="Menü">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#services">Hizmetler</a>
+    <a href="#trucks">Tır Filosu</a>
+    <a href="#process">Süreç</a>
+    <a href="#testimonials">Referanslar</a>
+    <a href="#contact">İletişim</a>
+    <a class="cta" href="#contact">İletişime Geç</a>
+  </nav>
+</header>
+<div class="header-spacer"></div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="section-title">KURUMSAL LOJİSTİK ÇÖZÜMLERİ</span>
+    <h1>Zamanında Teslim Edilmeyen Yükler<br>Doğrudan Para Kaybıdır.</h1>
+    <p>
+      E.T.S Lojistik; yükünüzün türüne, teslim süresine ve operasyonel risklere göre
+      planlama yapan, söz verdiği tarihi tutan profesyonel bir taşımacılık firmasıdır.
+    </p>
+    <ul>
+      <li>Net süre, net fiyat, yazılı teyit</li>
+      <li>Sigortalı, izlenebilir taşıma süreçleri</li>
+      <li>Operasyon boyunca tek muhatap</li>
+      <li>7/24 takip ve destek</li>
+    </ul>
+    
+    <div class="cta-buttons">
+      <button class="cta-btn" onclick="window.open('https://wa.me/905458820655?text=Merhaba%20E.T.S%20Lojistik,%20web%20sitenizden%20ulaşıyorum.%20Taşıma%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.')">
+        💬 WhatsApp'tan Teklif Al
+      </button>
+      <button class="cta-btn secondary" onclick="window.open('tel:+905458820655')">
+        📞 Hemen Ara
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="container">
+  <span class="section-title">HİZMETLERİMİZ</span>
+  <h2 class="section-heading">Yükünüze En Uygun Taşıma Modeli</h2>
+  <p class="section-description">
+    Her yük aynı değildir. Bu nedenle E.T.S Lojistik olarak standart çözümler sunmayız.
+    Yükünüzün hacmine, ağırlığına ve teslim süresine göre en doğru taşıma modelini belirleriz.
+  </p>
+
+  <div class="problem-grid">
+    <div class="problem-box reveal">
+      <img src="" alt="Paletli Taşıma" class="random-image" data-type="service">
+      <div class="content">
+        <strong>Palet Bazlı Taşıma</strong>
+        Standart ve euro paletli yükler için, istif güvenliği sağlanmış ve operasyon süreci izlenebilir taşıma modeli. 1-50 palet arası özel çözümler.
+      </div>
+    </div>
+
+    <div class="problem-box reveal">
+      <img src="" alt="Parsiyel Taşıma" class="random-image" data-type="service">
+      <div class="content">
+        <strong>KG Bazlı / Parsiyel Taşıma</strong>
+        Komple araç gerektirmeyen yükler için, ağırlık esaslı maliyetlendirme ile ekonomik sevkiyat. Mersin'den Türkiye'nin her noktasına.
+      </div>
+    </div>
+
+    <div class="problem-box reveal">
+      <img src="" alt="Komple Tır" class="random-image" data-type="service">
+      <div class="content">
+        <strong>Komple Tır Taşıma</strong>
+        Yükün tamamının size ait olduğu, direkt teslimatlı ve minimum aktarmalı taşıma çözümü. Kapıdan kapıya hizmet.
+      </div>
+    </div>
+
+    <div class="problem-box reveal">
+      <img src="" alt="Konteyner Taşımacılığı" class="random-image" data-type="service">
+      <div class="content">
+        <strong>Konteyner Taşımacılığı</strong>
+        Uluslararası ve yurtiçi konteyner taşımacılığı çözümleri. 20ft ve 40ft konteynerler ile güvenli ve ekonomik taşıma.
+      </div>
+    </div>
+
+    <div class="problem-box reveal">
+      <img src="" alt="Tehlikeli Madde Taşıma" class="random-image" data-type="service">
+      <div class="content">
+        <strong>Tehlikeli Madde Taşıma (ADR)</strong>
+        Kimyasallar, yanıcı maddeler ve diğer tehlikeli malzemeler için ADR sertifikalı özel taşıma çözümleri.
+      </div>
+    </div>
+
+    <div class="problem-box reveal">
+      <img src="" alt="Proje Taşımacılığı" class="random-image" data-type="service">
+      <div class="content">
+        <strong>Proje Taşımacılığı</strong>
+        Büyük ölçekli, ağır ve hacimli yükler için özel planlama, ekipman ve uzman personel ile taşıma hizmeti.
+      </div>
+    </div>
+
+    <div class="problem-box reveal">
+      <img src="" alt="Depolama ve Dağıtım" class="random-image" data-type="service">
+      <div class="content">
+        <strong>Depolama ve Dağıtım</strong>
+        Modern depolarımızda güvenli depolama ve sonrasında dağıtım ağımız ile entegre lojistik çözümleri.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Truck Fleet -->
+<section id="trucks" class="container">
+  <span class="section-title">TIR FİLOMUZ</span>
+  <h2 class="section-heading">Modern ve Bakımlı Filo ile Hizmetinizdeyiz</h2>
+  <p class="section-description">
+    En güncel model, düşük yakıt tüketimli ve 7/24 takip edilen tır filosu ile yükleriniz güvende.
+  </p>
+
+  <div class="truck-grid">
+    <div class="truck-item reveal">
+      <img src="" alt="Modern Tır" class="random-image" data-type="truck">
+      <div class="overlay">
+        <strong>Modern Tırlar</strong><br>
+        Euro 6 standartlarında, düşük emisyonlu
+      </div>
+    </div>
+
+    <div class="truck-item reveal">
+      <img src="" alt="Tır Yük İndirme" class="random-image" data-type="truck">
+      <div class="overlay">
+        <strong>Özel Ekipmanlar</strong><br>
+        Hidrolik kaldırma sistemli, vinçli tırlar
+      </div>
+    </div>
+
+    <div class="truck-item reveal">
+      <img src="" alt="Tır Filo" class="random-image" data-type="truck">
+      <div class="overlay">
+        <strong>Geniş Filo</strong><br>
+        7.5t - 40t arası kapasite seçenekleri
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="container trust" style="background: #020617; color: white; border-radius: 16px;">
+  <div class="text-center">
+    <h2 class="section-heading" style="color: white;">Neden Bizi Tercih Ediyorlar?</h2>
+    <p class="section-description" style="color: #cbd5f5; margin: auto;">
+      10+ yıllık deneyimimizle, her sektörden yüzlerce müşteriye hizmet verdik.
+    </p>
+  </div>
+
+  <div class="trust-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+    <div class="trust-item text-center">
+      <h3 style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 0.5rem;">5.000+</h3>
+      <p>Başarılı Sevkiyat</p>
+    </div>
+    <div class="trust-item text-center">
+      <h3 style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 0.5rem;">10+</h3>
+      <p>Yıl Deneyim</p>
+    </div>
+    <div class="trust-item text-center">
+      <h3 style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 0.5rem;">50+</h3>
+      <p>Aktif Araç</p>
+    </div>
+    <div class="trust-item text-center">
+      <h3 style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 0.5rem;">24/7</h3>
+      <p>Canlı Takip</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="container">
+  <span class="section-title">REFERANSLAR</span>
+  <h2 class="section-heading">Müşterilerimiz Ne Diyor?</h2>
+  <p class="section-description">
+    Uzun vadeli iş birliklerimizin temelinde müşteri memnuniyeti ve güven yatar.
+  </p>
+
+  <div class="testimonial-grid">
+    <div class="testimonial reveal">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar" style="background: #0b3c5d;">MK</div>
+        <div>
+          <strong>Mehmet Kaya</strong>
+          <div>İnşaat Malzemeleri</div>
+        </div>
+      </div>
+      <p>"3 yıldır E.T.S ile çalışıyoruz. Gecikme yaşamadık, yüklerimiz hep zamanında teslim edildi. Özellikle Mersin-İstanbul hattında çok başarılılar."</p>
+      <div class="testimonial-rating">★★★★★</div>
+    </div>
+
+    <div class="testimonial reveal">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar" style="background: #f59e0b; color: #020617;">AS</div>
+        <div>
+          <strong>Ayşe Selçuk</strong>
+          <div>Gıda İşletmesi</div>
+        </div>
+      </div>
+      <p>"Soğuk zincir gerektiren ürünlerimizde bile sorunsuz hizmet alıyoruz. Profesyonel yaklaşımları ve iletişimleri için teşekkür ederiz."</p>
+      <div class="testimonial-rating">★★★★★</div>
+    </div>
+
+    <div class="testimonial reveal">
+      <div class="testimonial-header">
+        <div class="testimonial-avatar" style="background: #0f172a;">DY</div>
+        <div>
+          <strong>Deniz Yılmaz</strong>
+          <div>Tekstil Fabrikası</div>
+        </div>
+      </div>
+      <p>"Parsiyel taşıma konusunda en güvendiğim firma. Fiyat performans dengesi çok iyi. Ekip her zaman ulaşılabilir durumda."</p>
+      <div class="testimonial-rating">★★★★☆</div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="container">
+  <span class="section-title">SÜREÇ</span>
+  <h2 class="section-heading">Şeffaf, Kontrol Edilebilir ve Net Bir Süreç</h2>
+  <p class="section-description">
+    Operasyon sürecimizi baştan sona net kurarız. Belirsizlik yaratmayız, sürpriz maliyet çıkarmaz, sürecin her adımını kontrol altında tutarız.
+  </p>
+
+  <div class="process-grid">
+    <div class="process-item reveal">
+      <strong>1. Yük Bilgisi & Planlama</strong>
+      <p>Yükün türü, hacmi, çıkış ve varış noktaları analiz edilir. En uygun taşıma modeli ve rota belirlenir.</p>
+    </div>
+    
+    <div class="process-item reveal">
+      <strong>2. Net Teklif & Onay</strong>
+      <p>Süre ve fiyat yazılı olarak netleştirilir. Onay sonrası operasyon başlatılır.</p>
+    </div>
+    
+    <div class="process-item reveal">
+      <strong>3. Yükleme & Takip</strong>
+      <p>Yükleme görselleri paylaşılır, sevkiyat canlı takip edilir, düzenli bilgilendirme yapılır.</p>
+    </div>
+    
+    <div class="process-item reveal">
+      <strong>4. Teslim & Onay</strong>
+      <p>Yük zamanında ve eksiksiz şekilde teslim edilir. Teslim belgeleri dijital olarak iletim.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="container">
+  <span class="section-title">S.S.S</span>
+  <h2 class="section-heading">Sıkça Sorulan Sorular</h2>
+  
+  <div style="max-width: 900px; margin-top: 2.5rem;">
+    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0;">
+      <strong style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Fiyatlandırma neye göre belirleniyor?</strong>
+      <p style="color: #475569;">Yükün ağırlığı, hacmi, çıkış–varış noktası mesafesi, taşıma türü (parsiyel/komple) ve teslim süresine göre netleştirilir.</p>
+    </div>
+    
+    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0;">
+      <strong style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Sigorta dahil mi?</strong>
+      <p style="color: #475569;">Evet, tüm taşımalarda yükünüz Allianz sigorta kapsamına alınır. Sigorta detayları teklif aşamasında paylaşılır.</p>
+    </div>
+    
+    <div style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0;">
+      <strong style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Teslim süresi garanti ediliyor mu?</strong>
+      <p style="color: #475569;">Planlama aşamasında belirtilen süre yazılı olarak teyit edilir ve %98 oranında zamanında teslimat sağlanır.</p>
+    </div>
+    
+    <div>
+      <strong style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Parsiyel ve komple taşıma farkı nedir?</strong>
+      <p style="color: #475569;">Parsiyel taşımada araç paylaşılır (daha ekonomik), komple taşımada araç tamamen size tahsis edilir (daha hızlı).</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="container text-center">
+    <h2 class="section-heading mb-0" style="color: white;">Yükünüz İçin En Uygun Çözümü Bulalım</h2>
+    <p style="max-width: 720px; margin: 1rem auto 2rem; color: #cbd5f5;">
+      Uzman ekibimiz yük bilgilerinizi analiz eder, size en uygun süre ve fiyatı net şekilde sunar.
+    </p>
+    <div class="cta-buttons" style="justify-content: center;">
+      <button class="cta-btn" onclick="window.open('https://wa.me/905458820655?text=Merhaba%20E.T.S%20Lojistik,%20web%20sitenizden%20ulaşıyorum.%20Taşıma%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.')">
+        💬 WhatsApp'tan Yaz
+      </button>
+      <button class="cta-btn secondary" onclick="window.open('tel:+905458820655')">
+        📞 Hemen Ara
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container">
+  <span class="section-title">İLETİŞİM</span>
+  <h2 class="section-heading">Bizimle İletişime Geçin</h2>
+  <p class="section-description">
+    Teklif ve operasyonlar WhatsApp üzerinden hızlıca yönetilir. Hemen iletişime geçin.
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
+    <div>
+      <h3 style="margin-bottom: 1.5rem; color: var(--dark);">İletişim Bilgileri</h3>
+      <div style="line-height: 2; font-size: 1.05rem;">
+        <p><strong>E.T.S Group Lojistik ve Depolama</strong></p>
+        <p>📍 <strong>Adres:</strong> Atalar Pirice Küme Evleri, 33402 Tarsus / Mersin</p>
+        <p>📞 <strong>Telefon:</strong> <a href="tel:+905458820655" style="color: inherit; text-decoration: none;">0545 882 06 55</a></p>
+        <p>✉️ <strong>E-posta:</strong> <a href="mailto:etslojistiktasimacik@gmail.com" style="color: inherit; text-decoration: none;">etslojistiktasimacik@gmail.com</a></p>
+        <p>🕐 <strong>Çalışma Saatleri:</strong> Pazartesi-Cuma 08:00-18:00, Cumartesi 09:00-14:00</p>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://wa.me/905458820655" class="social-link" target="_blank">
+          <span>💬</span>
+        </a>
+        <a href="https://instagram.com" class="social-link" target="_blank">
+          <span>📷</span>
+        </a>
+        <a href="https://linkedin.com" class="social-link" target="_blank">
+          <span>👔</span>
+        </a>
+        <a href="mailto:etslojistiktasimacik@gmail.com" class="social-link">
+          <span>✉️</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom: 1.5rem; color: var(--dark);">Konumumuz</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.123456789!2d34.8382423!3d36.8653084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d4c8f83f8c2a07%3A0xabcdef1234567890!2sAtalar%2C%20Pirice%20K%C3%BCme%20Evler%2C%2033402%20Tarsus%2FMersin!5e0!3m2!1str!2str!4v1700000000000"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: var(--radius);"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=36.8653084,34.8382423" target="_blank" style="display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#f59e0b; color:#020617; font-weight:700; text-decoration:none; border-radius:6px; transition: var(--transition);">
+        📍 Yol Tarifi Al
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h3>E.T.S LOJİSTİK</h3>
+      <p style="margin-top: 1rem; line-height: 1.7;">
+        Yurtiçi ve uluslararası lojistik, parsiyel ve komple taşıma ile depolama çözümlerinde güvenilir operasyon ortağınız.
+      </p>
+    </div>
+    
+    <div>
+      <h3>HIZLI LİNKLER</h3>
+      <ul class="footer-links">
+        <li><a href="#services">Hizmetler</a></li>
+        <li><a href="#trucks">Tır Filosu</a></li>
+        <li><a href="#process">Süreç</a></li>
+        <li><a href="#testimonials">Referanslar</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h3>İLETİŞİM</h3>
+      <div class="footer-contact">
+        <p>📍 Atalar Pirice Küme Evleri<br>33402 Tarsus / Mersin</p>
+        <p>📞 0545 882 06 55</p>
+        <p>✉️ etslojistiktasimacik@gmail.com</p>
+      </div>
+    </div>
+    
+    <div>
+      <h3>ÇALIŞMA SAATLERİ</h3>
+      <div class="footer-contact">
+        <p>Pazartesi - Cuma: 08:00 - 18:00</p>
+        <p>Cumartesi: 09:00 - 14:00</p>
+        <p>Pazar: Kapalı</p>
+        <small style="color: #94a3b8;">*Acil durumlarda 7/24 ulaşılabilir</small>
+      </div>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    © 2024 E.T.S Group Lojistik ve Depolama · Tüm Hakları Saklıdır
+  </div>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/905458820655?text=Merhaba%20E.T.S%20Lojistik,%20web%20sitenizden%20ulaşıyorum.%20Taşıma%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum." 
+   class="whatsapp-button" 
+   target="_blank">
+  💬 <span>WhatsApp'tan Yaz</span>
+</a>
+
+<!-- JavaScript -->
+<script>
+  // Rastgele görsel atama fonksiyonu
+  function assignRandomImages() {
+    // Toplam görsel sayısı
+    const totalImages = 20;
+    
+    // Tüm görseller için 1'den 20'ye kadar sayılar oluştur
+    const allImageNumbers = Array.from({length: totalImages}, (_, i) => i + 1);
+    
+    // Görselleri karıştır
+    const shuffledImages = [...allImageNumbers].sort(() => Math.random() - 0.5);
+    
+    // Hizmetler bölümündeki görseller (7 adet)
+    const serviceImages = document.querySelectorAll('.problem-box img.random-image[data-type="service"]');
+    
+    // Tır filosu bölümündeki görseller (3 adet)
+    const truckImages = document.querySelectorAll('.truck-item img.random-image[data-type="truck"]');
+    
+    // Hizmetler bölümüne ilk 7 görseli ata
+    serviceImages.forEach((img, index) => {
+      if (index < 7 && shuffledImages[index]) {
+        img.src = `images/${shuffledImages[index]}.jpeg`;
+      }
+    });
+    
+    // Tır filosu bölümüne sonraki 3 görseli ata (8, 9, 10. görseller)
+    truckImages.forEach((img, index) => {
+      const imageIndex = 7 + index;
+      if (imageIndex < 10 && shuffledImages[imageIndex]) {
+        img.src = `images/${shuffledImages[imageIndex]}.jpeg`;
+      }
+    });
+    
+    // Eğer 10'dan fazla görsel kullanmak isterseniz, kalan görselleri başka yerlerde kullanabilirsiniz
+    console.log('Kullanılan görsel numaraları:', shuffledImages.slice(0, 10));
+    console.log('Kullanılmayan görsel numaraları:', shuffledImages.slice(10));
+  }
+
+  // Progress Bar
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.querySelector('.progress-bar').style.width = scrolled + '%';
+  });
+
+  // Mobile Navigation - DÜZELTİLDİ
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const hamburgerSpans = hamburger.querySelectorAll('span');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+    
+    // Hamburger animasyonu
+    if (mobileNav.classList.contains('active')) {
+      hamburgerSpans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+      hamburgerSpans[1].style.opacity = '0';
+      hamburgerSpans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+      // Mobil menü açıldığında body scroll'unu engelle
+      document.body.style.overflow = 'hidden';
+    } else {
+      hamburgerSpans[0].style.transform = 'none';
+      hamburgerSpans[1].style.opacity = '1';
+      hamburgerSpans[2].style.transform = 'none';
+      // Mobil menü kapandığında body scroll'unu aktif et
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+      hamburgerSpans[0].style.transform = 'none';
+      hamburgerSpans[1].style.opacity = '1';
+      hamburgerSpans[2].style.transform = 'none';
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Scroll Animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Eğer mobil menü açıksa, kapat
+        if (mobileNav.classList.contains('active')) {
+          mobileNav.classList.remove('active');
+          hamburgerSpans[0].style.transform = 'none';
+          hamburgerSpans[1].style.opacity = '1';
+          hamburgerSpans[2].style.transform = 'none';
+          document.body.style.overflow = 'auto';
+        }
+        
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Pencere yeniden boyutlandırıldığında mobil menüyü kapat
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && mobileNav.classList.contains('active')) {
+      mobileNav.classList.remove('active');
+      hamburgerSpans[0].style.transform = 'none';
+      hamburgerSpans[1].style.opacity = '1';
+      hamburgerSpans[2].style.transform = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Sayfa yüklendiğinde rastgele görselleri ata
+  document.addEventListener('DOMContentLoaded', assignRandomImages);
+</script>
+</body>
+</html>
