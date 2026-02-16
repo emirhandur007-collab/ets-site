@@ -10,7 +10,7 @@
   <meta name="keywords" content="Mersin lojistik, tır taşımacılığı, parsiyel taşıma Mersin, komple tır, yurtiçi lojistik, uluslararası taşıma, Tarsus lojistik" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="E.T.S Lojistik" />
-  <link rel="canonical" href="https://etslojistik.com" />
+  <link rel="canonical" href="https://etsgrouplojistik.com" />
 
   <!-- SCHEMA -->
   <script type="application/ld+json">
@@ -18,14 +18,13 @@
     "@context": "https://schema.org",
     "@type": "LogisticsBusiness",
     "name": "E.T.S Group Lojistik ve Depolama",
-    "url": "https://etslojistik.com",
+    "url": "https://etsgrouplojistik.com",
     "telephone": "+905458820655",
-    "email": "etslojistiktasimacik@gmail.com",
+    "email": "etslojistiktasimacilik@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Atalar Pirice Küme Evleri",
-      "addressLocality": "Tarsus, Mersin",
-      "postalCode": "33402",
+      "streetAddress": "Mersin Nakliyeciler Sitesi A Blok No:7",
+      "addressLocality": "Mersin",
       "addressCountry": "TR"
     },
     "priceRange": "₺₺",
@@ -84,7 +83,7 @@
       transition: width 0.3s ease;
     }
 
-    /* HEADER & NAVIGATION - DÜZELTİLDİ */
+    /* HEADER & NAVIGATION */
     .site-header {
       position: fixed;
       top: 0;
@@ -163,7 +162,7 @@
       display: none;
     }
 
-    /* HAMBURGER MENU FOR MOBILE - DÜZELTİLDİ */
+    /* HAMBURGER MENU FOR MOBILE */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -172,7 +171,7 @@
       border: none;
       cursor: pointer;
       padding: 0.5rem;
-      z-index: 1002; /* Hamburger'i üste çıkardık */
+      z-index: 1002;
     }
 
     .hamburger span {
@@ -183,10 +182,10 @@
       transition: var(--transition);
     }
 
-    /* MOBILE NAV - TAMAMEN DÜZELTİLDİ */
+    /* MOBILE NAV */
     .mobile-nav {
       position: fixed;
-      top: 70px; /* Header yüksekliği kadar boşluk */
+      top: 70px;
       left: 0;
       width: 100%;
       background: rgba(2, 6, 23, 0.99);
@@ -196,7 +195,7 @@
       opacity: 0;
       visibility: hidden;
       transition: var(--transition);
-      z-index: 1001; /* Header'dan üste çıkardık */
+      z-index: 1001;
       border-top: 1px solid rgba(255,255,255,0.1);
       box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     }
@@ -238,7 +237,7 @@
 
     /* HERO SECTION */
     .hero {
-      min-height: 85vh; /* 90vh'den 85vh'ye düşürdük */
+      min-height: 85vh;
       background:
         linear-gradient(rgba(2,6,23,0.85), rgba(2,6,23,0.92)),
         url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
@@ -249,13 +248,13 @@
       align-items: center;
       color: #fff;
       position: relative;
-      padding-top: 20px; /* Üstten biraz boşluk ekledik */
+      padding-top: 20px;
     }
 
     .hero-content {
       max-width: 720px;
       animation: fadeInUp 1s ease-out;
-      margin-top: -20px; /* Yukarı kaymasını engellemek için */
+      margin-top: -20px;
     }
 
     @keyframes fadeInUp {
@@ -302,7 +301,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       margin-top: 2rem;
-      margin-bottom: 1rem; /* Alttan boşluk ekledik */
+      margin-bottom: 1rem;
     }
 
     .cta-btn {
@@ -425,6 +424,76 @@
       padding: 2rem 1.5rem 1.5rem;
     }
 
+    /* CLIENTS SECTION */
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .client-card {
+      background: white;
+      padding: 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      overflow: hidden;
+      border: 2px solid #f1f5f9;
+      position: relative;
+    }
+
+    .client-logo-container {
+      width: 100%;
+      height: 220px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .client-logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+
+    .client-logo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      opacity: 0.3;
+      position: relative;
+      z-index: 1;
+    }
+
+    .client-info {
+      padding: 1.5rem;
+      text-align: center;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .client-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .client-sector {
+      font-size: 0.9rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
     /* TESTIMONIALS */
     .testimonial-grid {
       display: grid;
@@ -499,6 +568,81 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
+    }
+
+    /* LOCATION CARDS */
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .location-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .location-header {
+      background: linear-gradient(135deg, var(--primary), #0b3c5d);
+      color: white;
+      padding: 1.5rem;
+    }
+
+    .location-header h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .location-header .badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: #020617;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .location-body {
+      padding: 1.5rem;
+    }
+
+    .location-info {
+      margin-bottom: 1.5rem;
+      line-height: 2;
+    }
+
+    .location-info p {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .location-map {
+      width: 100%;
+      height: 250px;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+    }
+
+    .map-link {
+      display: inline-block;
+      background: #f59e0b;
+      color: #020617;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+
+    .map-link:hover {
+      background: #d97706;
+      transform: translateY(-2px);
     }
 
     /* CTA BANNER */
@@ -638,6 +782,10 @@
       .hero h1 {
         font-size: 2.5rem;
       }
+      
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -676,7 +824,8 @@
       .problem-grid,
       .truck-grid,
       .testimonial-grid,
-      .process-grid {
+      .process-grid,
+      .clients-grid {
         grid-template-columns: 1fr;
       }
       
@@ -691,11 +840,14 @@
         display: none;
       }
       
-      /* Mobil menü düzeltmeleri */
       .mobile-nav {
         top: 70px;
-        height: calc(100vh - 70px); /* Ekranın geri kalanını kapla */
+        height: calc(100vh - 70px);
         overflow-y: auto;
+      }
+      
+      .location-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -780,7 +932,7 @@
       <a href="#services">Hizmetler</a>
       <a href="#trucks">Tır Filosu</a>
       <a href="#process">Süreç</a>
-      <a href="#testimonials">Referanslar</a>
+      <a href="#clients">İş Ortaklarımız</a>
       <a href="#contact">İletişim</a>
       <a class="cta" href="#contact">İletişime Geç</a>
     </nav>
@@ -798,7 +950,7 @@
     <a href="#services">Hizmetler</a>
     <a href="#trucks">Tır Filosu</a>
     <a href="#process">Süreç</a>
-    <a href="#testimonials">Referanslar</a>
+    <a href="#clients">İş Ortaklarımız</a>
     <a href="#contact">İletişim</a>
     <a class="cta" href="#contact">İletişime Geç</a>
   </nav>
@@ -964,6 +1116,138 @@
   </div>
 </section>
 
+<!-- Clients Section -->
+<section id="clients" class="container">
+  <span class="section-title">İŞ ORTAKLARIMIZ</span>
+  <h2 class="section-heading">Güvenilir İş Birliklerimiz</h2>
+  <p class="section-description">
+    Farklı sektörlerden önde gelen firmalar ile uzun süredir birlikte çalışıyoruz.
+  </p>
+
+  <div class="clients-grid">
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/yayla-bakliyat.webp" alt="Yayla Bakliyat Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🌾</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Yayla Bakliyat</div>
+        <div class="client-sector">Gıda & Bakliyat</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/pepsico.webp" alt="PepsiCo Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🥤</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">PepsiCo</div>
+        <div class="client-sector">İçecek & Gıda</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/borusan-lojistik.webp" alt="Borusan Lojistik Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🚛</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Borusan Lojistik</div>
+        <div class="client-sector">Lojistik</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/bakis-tarim.webp" alt="Bakış Tarım Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🌱</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Bakış Tarım</div>
+        <div class="client-sector">Tarım & Hayvancılık</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/ceva-lojistik.webp" alt="Ceva Lojistik Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">📦</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Ceva Lojistik</div>
+        <div class="client-sector">Lojistik</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/sena-treyler.webp" alt="Sena Treyler Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🚚</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Sena Treyler</div>
+        <div class="client-sector">Taşımacılık</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/alp-ozler-lojistik.webp" alt="Alp Özler Lojistik Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🚛</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Alp Özler Lojistik</div>
+        <div class="client-sector">Lojistik</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/ozan-mutahitlik.webp" alt="Ozan Mütahitlik Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🏗️</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Ozan Mütahitlik</div>
+        <div class="client-sector">İnşaat</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/sms-makina.webp" alt="S.M.S Makine Sanayi Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">⚙️</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">S.M.S Makine Sanayi</div>
+        <div class="client-sector">Makine İmalat</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/murat-lojistik.webp" alt="Murat Lojistik Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">🚚</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Murat Lojistik</div>
+        <div class="client-sector">Lojistik</div>
+      </div>
+    </div>
+
+    <div class="client-card reveal">
+      <div class="client-logo-container">
+        <img src="images/clients/alisan-lojistik.webp" alt="Alişan Lojistik Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="client-logo-placeholder" style="display: none;">📦</div>
+      </div>
+      <div class="client-info">
+        <div class="client-name">Alişan Lojistik</div>
+        <div class="client-sector">Lojistik</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Testimonials -->
 <section id="testimonials" class="container">
   <span class="section-title">REFERANSLAR</span>
@@ -1093,49 +1377,106 @@
   <span class="section-title">İLETİŞİM</span>
   <h2 class="section-heading">Bizimle İletişime Geçin</h2>
   <p class="section-description">
-    Teklif ve operasyonlar WhatsApp üzerinden hızlıca yönetilir. Hemen iletişime geçin.
+    Ofisimiz ve depomuz ayrı lokasyonlardadır. İhtiyacınıza göre en uygun noktadan size hizmet vermekteyiz.
   </p>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
-    <div>
-      <h3 style="margin-bottom: 1.5rem; color: var(--dark);">İletişim Bilgileri</h3>
-      <div style="line-height: 2; font-size: 1.05rem;">
-        <p><strong>E.T.S Group Lojistik ve Depolama</strong></p>
-        <p>📍 <strong>Adres:</strong> Atalar Pirice Küme Evleri, 33402 Tarsus / Mersin</p>
-        <p>📞 <strong>Telefon:</strong> <a href="tel:+905458820655" style="color: inherit; text-decoration: none;">0545 882 06 55</a></p>
-        <p>✉️ <strong>E-posta:</strong> <a href="mailto:etslojistiktasimacik@gmail.com" style="color: inherit; text-decoration: none;">etslojistiktasimacik@gmail.com</a></p>
-        <p>🕐 <strong>Çalışma Saatleri:</strong> Pazartesi-Cuma 08:00-18:00, Cumartesi 09:00-14:00</p>
+  <div class="location-grid">
+    <!-- Ofis Lokasyonu -->
+    <div class="location-card reveal">
+      <div class="location-header">
+        <h3>🏢 Ofis Konumumuz</h3>
+        <span class="badge">Merkez Ofis</span>
       </div>
-      
-      <div class="social-links">
-        <a href="https://wa.me/905458820655" class="social-link" target="_blank">
-          <span>💬</span>
-        </a>
-        <a href="https://instagram.com" class="social-link" target="_blank">
-          <span>📷</span>
-        </a>
-        <a href="https://linkedin.com" class="social-link" target="_blank">
-          <span>👔</span>
-        </a>
-        <a href="mailto:etslojistiktasimacik@gmail.com" class="social-link">
-          <span>✉️</span>
+      <div class="location-body">
+        <div class="location-info">
+          <p>
+            <span>📍</span>
+            <span><strong>Adres:</strong> Mersin Nakliyeciler Sitesi A Blok No:7, Mersin</span>
+          </p>
+          <p>
+            <span>📞</span>
+            <span><strong>Telefon:</strong> <a href="tel:+905458820655" style="color: inherit; text-decoration: none;">0545 882 06 55</a></span>
+          </p>
+          <p>
+            <span>✉️</span>
+            <span><strong>E-posta:</strong> <a href="mailto:etslojistiktasimacilik@gmail.com" style="color: inherit; text-decoration: none;">etslojistiktasimacilik@gmail.com</a></span>
+          </p>
+          <p>
+            <span>🕐</span>
+            <span><strong>Çalışma Saatleri:</strong> Pazartesi-Cuma 08:00-18:00, Cumartesi 09:00-14:00</span>
+          </p>
+        </div>
+        
+        <iframe
+          class="location-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.1!2d34.6248!3d36.8123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQ4JzQ0LjMiTiAzNMKwMzcnMjkuMyJF!5e0!3m2!1str!2str!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        
+        <a href="https://maps.app.goo.gl/NEMXxYfPZrTACcPu9" target="_blank" class="map-link">
+          📍 Yol Tarifi Al
         </a>
       </div>
     </div>
 
-    <div>
-      <h3 style="margin-bottom: 1.5rem; color: var(--dark);">Konumumuz</h3>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.123456789!2d34.8382423!3d36.8653084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d4c8f83f8c2a07%3A0xabcdef1234567890!2sAtalar%2C%20Pirice%20K%C3%BCme%20Evler%2C%2033402%20Tarsus%2FMersin!5e0!3m2!1str!2str!4v1700000000000"
-        width="100%"
-        height="300"
-        style="border:0; border-radius: var(--radius);"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=36.8653084,34.8382423" target="_blank" style="display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#f59e0b; color:#020617; font-weight:700; text-decoration:none; border-radius:6px; transition: var(--transition);">
-        📍 Yol Tarifi Al
+    <!-- Depo Lokasyonu -->
+    <div class="location-card reveal">
+      <div class="location-header">
+        <h3>🏭 Depo Konumumuz</h3>
+        <span class="badge">Depolama Merkezi</span>
+      </div>
+      <div class="location-body">
+        <div class="location-info">
+          <p>
+            <span>📍</span>
+            <span><strong>Adres:</strong> Atalar Mah. Pirice Küme Evleri ETS Group No: 5 Kapı No: 5, Tarsus / Mersin</span>
+          </p>
+          <p>
+            <span>📦</span>
+            <span><strong>Hizmet:</strong> Depolama, Yükleme, Dağıtım</span>
+          </p>
+          <p>
+            <span>🏗️</span>
+            <span><strong>Kapasite:</strong> 5.000+ m² modern depo alanı</span>
+          </p>
+          <p>
+            <span>🕐</span>
+            <span><strong>Çalışma Saatleri:</strong> 7/24 Operasyonel</span>
+          </p>
+        </div>
+        
+        <iframe
+          class="location-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.123!2d34.8382!3d36.8653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDUxJzU1LjEiTiAzNMKwNTAnMTcuNiJF!5e0!3m2!1str!2str!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        
+        <a href="https://maps.app.goo.gl/tZwkbgU1aV96WpXDA" target="_blank" class="map-link">
+          📍 Yol Tarifi Al
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- İletişim Bilgileri -->
+  <div style="margin-top: 3rem; text-align: center;">
+    <h3 style="margin-bottom: 1.5rem; color: var(--dark);">Sosyal Medya</h3>
+    <div class="social-links" style="justify-content: center;">
+      <a href="https://wa.me/905458820655" class="social-link" target="_blank">
+        <span>💬</span>
+      </a>
+      <a href="https://instagram.com" class="social-link" target="_blank">
+        <span>📷</span>
+      </a>
+      <a href="https://linkedin.com" class="social-link" target="_blank">
+        <span>👔</span>
+      </a>
+      <a href="mailto:etslojistiktasimacilik@gmail.com" class="social-link">
+        <span>✉️</span>
       </a>
     </div>
   </div>
@@ -1157,27 +1498,25 @@
         <li><a href="#services">Hizmetler</a></li>
         <li><a href="#trucks">Tır Filosu</a></li>
         <li><a href="#process">Süreç</a></li>
-        <li><a href="#testimonials">Referanslar</a></li>
+        <li><a href="#clients">İş Ortaklarımız</a></li>
         <li><a href="#contact">İletişim</a></li>
       </ul>
     </div>
     
     <div>
-      <h3>İLETİŞİM</h3>
+      <h3>OFİS</h3>
       <div class="footer-contact">
-        <p>📍 Atalar Pirice Küme Evleri<br>33402 Tarsus / Mersin</p>
+        <p>📍 Mersin Nakliyeciler Sitesi<br>A Blok No:7, Mersin</p>
         <p>📞 0545 882 06 55</p>
-        <p>✉️ etslojistiktasimacik@gmail.com</p>
+        <p>✉️ etslojistiktasimacilik@gmail.com</p>
       </div>
     </div>
     
     <div>
-      <h3>ÇALIŞMA SAATLERİ</h3>
+      <h3>DEPO</h3>
       <div class="footer-contact">
-        <p>Pazartesi - Cuma: 08:00 - 18:00</p>
-        <p>Cumartesi: 09:00 - 14:00</p>
-        <p>Pazar: Kapalı</p>
-        <small style="color: #94a3b8;">*Acil durumlarda 7/24 ulaşılabilir</small>
+        <p>📍 Atalar Mah. Pirice Küme Evleri<br>ETS Group No:5 Kapı No:5<br>Tarsus / Mersin</p>
+        <p>🕐 7/24 Operasyonel</p>
       </div>
     </div>
   </div>
@@ -1198,39 +1537,25 @@
 <script>
   // Rastgele görsel atama fonksiyonu
   function assignRandomImages() {
-    // Toplam görsel sayısı
     const totalImages = 20;
-    
-    // Tüm görseller için 1'den 20'ye kadar sayılar oluştur
     const allImageNumbers = Array.from({length: totalImages}, (_, i) => i + 1);
-    
-    // Görselleri karıştır
     const shuffledImages = [...allImageNumbers].sort(() => Math.random() - 0.5);
     
-    // Hizmetler bölümündeki görseller (7 adet)
     const serviceImages = document.querySelectorAll('.problem-box img.random-image[data-type="service"]');
-    
-    // Tır filosu bölümündeki görseller (3 adet)
     const truckImages = document.querySelectorAll('.truck-item img.random-image[data-type="truck"]');
     
-    // Hizmetler bölümüne ilk 7 görseli ata
     serviceImages.forEach((img, index) => {
       if (index < 7 && shuffledImages[index]) {
         img.src = `images/${shuffledImages[index]}.jpeg`;
       }
     });
     
-    // Tır filosu bölümüne sonraki 3 görseli ata (8, 9, 10. görseller)
     truckImages.forEach((img, index) => {
       const imageIndex = 7 + index;
       if (imageIndex < 10 && shuffledImages[imageIndex]) {
         img.src = `images/${shuffledImages[imageIndex]}.jpeg`;
       }
     });
-    
-    // Eğer 10'dan fazla görsel kullanmak isterseniz, kalan görselleri başka yerlerde kullanabilirsiniz
-    console.log('Kullanılan görsel numaraları:', shuffledImages.slice(0, 10));
-    console.log('Kullanılmayan görsel numaraları:', shuffledImages.slice(10));
   }
 
   // Progress Bar
@@ -1241,7 +1566,7 @@
     document.querySelector('.progress-bar').style.width = scrolled + '%';
   });
 
-  // Mobile Navigation - DÜZELTİLDİ
+  // Mobile Navigation
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   const hamburgerSpans = hamburger.querySelectorAll('span');
@@ -1249,23 +1574,19 @@
   hamburger.addEventListener('click', () => {
     mobileNav.classList.toggle('active');
     
-    // Hamburger animasyonu
     if (mobileNav.classList.contains('active')) {
       hamburgerSpans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
       hamburgerSpans[1].style.opacity = '0';
       hamburgerSpans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-      // Mobil menü açıldığında body scroll'unu engelle
       document.body.style.overflow = 'hidden';
     } else {
       hamburgerSpans[0].style.transform = 'none';
       hamburgerSpans[1].style.opacity = '1';
       hamburgerSpans[2].style.transform = 'none';
-      // Mobil menü kapandığında body scroll'unu aktif et
       document.body.style.overflow = 'auto';
     }
   });
 
-  // Close mobile menu when clicking a link
   document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', () => {
       mobileNav.classList.remove('active');
@@ -1294,7 +1615,7 @@
     observer.observe(el);
   });
 
-  // Smooth scrolling for anchor links
+  // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -1304,7 +1625,6 @@
       
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
-        // Eğer mobil menü açıksa, kapat
         if (mobileNav.classList.contains('active')) {
           mobileNav.classList.remove('active');
           hamburgerSpans[0].style.transform = 'none';
@@ -1321,7 +1641,6 @@
     });
   });
 
-  // Pencere yeniden boyutlandırıldığında mobil menüyü kapat
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && mobileNav.classList.contains('active')) {
       mobileNav.classList.remove('active');
@@ -1332,7 +1651,6 @@
     }
   });
 
-  // Sayfa yüklendiğinde rastgele görselleri ata
   document.addEventListener('DOMContentLoaded', assignRandomImages);
 </script>
 </body>
